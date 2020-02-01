@@ -1,0 +1,10 @@
+{
+  "name": "Progradient",
+  "short_name": "Progradient",
+  "scope": "/",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFF",
+  "theme_color": "#FFF",
+  "orientation": "portrait-primary"
+}

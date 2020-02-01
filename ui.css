@@ -1,0 +1,93 @@
+:root {
+  --bg: rgba(255, 255, 255, 0.65);
+  --fg: #666;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow-y: hidden;
+  font-family: 'Comfortaa', Verdana, Arial, Helvetica, sans-serif;
+  background-color: gray;
+}
+h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 1em;
+}
+nav button svg {
+  width: 1.8em;
+  height: 1.8em;
+}
+@keyframes bottom-action-bar-mount {
+  from {
+    transform: translateY(800px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em;
+  width: auto;
+  background-color: var(--bg);
+  animation-name: bottom-action-bar-mount;
+  animation-duration: 0.4s;
+}
+@media screen and (min-width: 840px) {
+  main {
+    justify-content: center !important;
+  }
+}
+
+button,
+main button.seq-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  font-size: 1.4em;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+}
+button svg,
+main button.seq-control svg {
+  width: 2.2em;
+  height: 2.2em;
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: fill 0.15s linear;
+}
+button:active svg,
+main button.seq-control:active svg {
+  fill: var(--fg);
+  stroke: var(--bg);
+}
+
+#present-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border-radius: 25px;
+  background-color: transparent;
+  color: var(--fg);
+  font-size: 1.6em;
+  font-weight: bold;
+}
